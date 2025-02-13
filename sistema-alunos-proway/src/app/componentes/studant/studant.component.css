@@ -1,0 +1,14 @@
+.card {
+    border: solid 1px silver;
+    width: 230px;
+    padding: 12px;
+    margin: 0 8px;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+}
