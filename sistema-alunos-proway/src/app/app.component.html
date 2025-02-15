@@ -1,12 +1,29 @@
-<header>
-  <h1>{{ title }}</h1>
-</header>
+<div class="container">
+  
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  
+  <main>
 
-<main>
-  <app-studant [aluno]="listaAlunos[0]"></app-studant>
-  <app-studant [aluno]="listaAlunos[1]"></app-studant>
-</main>
+    <div>
+      <button (click)="alterarExibicao()">Mostrar {{ exibicao === 'cards' ? 'Lista' : 'Cards' }}</button>
+    </div>
+  
+    <div class="cards" *ngIf="exibicao === 'cards'">
+      <app-studant [aluno]="listaAlunos[0]"></app-studant>
+      <app-studant [aluno]="listaAlunos[1]"></app-studant>
+      <app-studant [aluno]="listaAlunos[2]"></app-studant>
+    </div>
+  
+    <div class="lista" *ngIf="exibicao === 'lista'">
+      <app-student-list [lista]="listaAlunos"></app-student-list>
+    </div>
+  
+  </main>
+  
+  <footer>
+    <p>- Desenvolvido por Alunos Proway -</p>
+  </footer>
 
-<footer>
-  <p>- Desenvolvido por Alunos Proway -</p>
-</footer>
+</div>

@@ -2,13 +2,36 @@
     border: solid 1px silver;
     width: 230px;
     padding: 12px;
-    margin: 0 8px;
+    margin: 8px;
 }
 
 .card h3 {
     text-align: center;
+    margin: 12px 0;
 }
 
 .card img {
     width: 100%;
+}
+
+.card p.footer {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.aprovacao {
+    background-color: silver;
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    color: #FFF;
+}
+
+.aprovado {
+    background-color: #2ca02c;
+}
+
+.reprovado {
+    background-color: #ca2a2a;
 }

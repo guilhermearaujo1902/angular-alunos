@@ -1,3 +1,10 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 header, footer {
     background-color: #223363;
     color: #FFF;
@@ -8,12 +15,20 @@ header, footer {
 
 footer {
     padding: 12px;
-    position: absolute;
-    bottom: 0;
 }
 
-main {
+main div {
+    margin-bottom: 16px;
+}
+
+.cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 16px;
+}
+
+.lista {
+    display: flex;
+    justify-content: center;
 }
