@@ -11,26 +11,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>{{ lista[0].matricula }}</td>
-                <td>{{ lista[0].nome }}</td>
-                <td>{{ lista[0].email }}</td>
-                <td>{{ lista[0].curso }}</td>
-                <td>{{ lista[0].cadastro }}</td>
-            </tr>
-            <tr>
-                <td>000</td>
-                <td>Bob</td>
-                <td>bob.com.br</td>
-                <td>Angular</td>
-                <td>Reprovado</td>
-            </tr>
-            <tr>
-                <td>000</td>
-                <td>Bob</td>
-                <td>bob.com.br</td>
-                <td>Angular</td>
-                <td>Reprovado</td>
+            <tr *ngFor="let aluno of alunos">
+                <td>{{ aluno.matricula }}</td>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.email }}</td>
+                <td>{{ aluno.curso }}</td>
+                <td>{{ aluno.cadastro === true ? 'Aprovado' : 'Reprovado' }}</td>
             </tr>
         </tbody>
     </table>

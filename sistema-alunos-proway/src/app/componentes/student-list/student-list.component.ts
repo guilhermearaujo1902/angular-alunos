@@ -10,6 +10,6 @@ import { Aluno } from '../../interfaces/Aluno';
 export class StudentListComponent {
 
   @Input()
-  lista: Aluno[] = [];
+  alunos: Aluno[] = [];
 
 }

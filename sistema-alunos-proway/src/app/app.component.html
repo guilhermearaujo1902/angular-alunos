@@ -6,18 +6,23 @@
   
   <main>
 
-    <div>
+    <div class="botoes">
       <button (click)="alterarExibicao()">Mostrar {{ exibicao === 'cards' ? 'Lista' : 'Cards' }}</button>
+      <button (click)="filtrarAlunos('APROVADO')">Exibir Aprovados</button>
+      <button (click)="filtrarAlunos('REPROVADO')">Exibir Reprovados</button>
+      <button (click)="filtrarAlunos('TODOS')">Exibir Todos</button>
     </div>
   
     <div class="cards" *ngIf="exibicao === 'cards'">
-      <app-studant [aluno]="listaAlunos[0]"></app-studant>
-      <app-studant [aluno]="listaAlunos[1]"></app-studant>
-      <app-studant [aluno]="listaAlunos[2]"></app-studant>
+      <app-studant *ngFor="let item of listaAlunos" [aluno]="item"></app-studant>
     </div>
   
     <div class="lista" *ngIf="exibicao === 'lista'">
-      <app-student-list [lista]="listaAlunos"></app-student-list>
+      <app-student-list [alunos]="listaAlunos"></app-student-list>
+    </div>
+
+    <div class="mensagem" *ngIf="exibicao === 'mensagem'">
+      <p>Não foi possível encontrar dados na lista!</p>
     </div>
   
   </main>
