@@ -13,15 +13,15 @@
       <button (click)="filtrarAlunos('TODOS')">Exibir Todos</button>
     </div>
   
-    <div class="cards" *ngIf="exibicao === 'cards'">
+    <div class="cards" *ngIf="exibicao === 'cards' && listaAlunos.length !== 0">
       <app-studant *ngFor="let item of listaAlunos" [aluno]="item"></app-studant>
     </div>
   
-    <div class="lista" *ngIf="exibicao === 'lista'">
-      <app-student-list [alunos]="listaAlunos"></app-student-list>
+    <div class="lista" *ngIf="exibicao === 'lista' && listaAlunos.length !== 0">
+      <app-student-list [alunos]="listaAlunos" (excluir)="onExcluir($event)"></app-student-list>
     </div>
 
-    <div class="mensagem" *ngIf="exibicao === 'mensagem'">
+    <div class="mensagem" *ngIf="listaAlunos.length === 0">
       <p>Não foi possível encontrar dados na lista!</p>
     </div>
   

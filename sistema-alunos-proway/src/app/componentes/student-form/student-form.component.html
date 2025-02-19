@@ -1,0 +1,19 @@
+<div class="form">
+
+    <h3>Formulário Aluno</h3>
+
+    <div>
+        <label for="matricula">Matrícula</label>
+        <input type="text" id="matricula" name="matricula" [(ngModel)]="aluno.matricula">
+    </div>
+
+    <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="aluno.nome">
+    </div>
+
+    <div>
+        <button (click)="salvar()">Salvar</button>
+    </div>
+
+</div>

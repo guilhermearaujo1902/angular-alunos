@@ -7,7 +7,7 @@ th, td {
 }
 
 table {
-    width: 600px;
+    width: 70vw;
 }
 
 thead tr {
@@ -23,4 +23,29 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #223363;
     color: #FFF;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    background-color: silver;
+    color: #FFF;
+    padding: 8px 12px;
+    margin: 0 4px;
+    display: inline;
+    cursor: pointer;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-vermelho {
+    background-color: #c92b2b;
+}
+
+.btn-verde {
+    background-color: #1d9c1d;
 }

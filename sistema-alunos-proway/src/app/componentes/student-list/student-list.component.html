@@ -8,6 +8,7 @@
                 <th>E-mail</th>
                 <th>Curso</th>
                 <th>Status</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +18,16 @@
                 <td>{{ aluno.email }}</td>
                 <td>{{ aluno.curso }}</td>
                 <td>{{ aluno.cadastro === true ? 'Aprovado' : 'Reprovado' }}</td>
+                <td class="botoes">
+                    <button class="btn-verde" (click)="editarAluno(aluno)">Editar</button>
+                    <button class="btn-vermelho" (click)="excluirAluno(aluno.matricula)">Excluir</button>
+                </td>
             </tr>
         </tbody>
     </table>
 
+</div>
+
+<div>
+    <app-student-form [aluno]="alunoEdicao" (adicionar)="onAdicionar($event)"></app-student-form>
 </div>

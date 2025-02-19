@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudantComponent } from './componentes/studant/studant.component';
 import { StudentListComponent } from './componentes/student-list/student-list.component';
+import { StudentFormComponent } from './componentes/student-form/student-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudantComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

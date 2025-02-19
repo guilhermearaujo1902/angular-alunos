@@ -104,34 +104,33 @@ export class AppComponent {
         this.listaAlunos = this.listaAlunosBkp.filter( aluno => {
           return aluno.cadastro === true;
         });
-
-        if (this.listaAlunos.length === 0) {
-          this.exibicao = 'mensagem';
-        } else {
-          this.exibicao = 'cards';
-        }
         break;
 
       case 'REPROVADO':
         this.listaAlunos = this.listaAlunosBkp.filter( aluno => {
           return aluno.cadastro === false;
         });
-
-        if (this.listaAlunos.length === 0) {
-          this.exibicao = 'mensagem';
-        } else {
-          this.exibicao = 'cards';
-        }
         break;
       
       case 'TODOS':
         this.listaAlunos = this.listaAlunosBkp;
-        this.exibicao = 'cards';
         break;
 
       default:
         console.log(`Valor inválido para filtro: ${filtro}`);
     }
+
+  }
+
+  onExcluir(matricula: number): void {
+    
+    this.listaAlunos.forEach( (aluno, index) => {
+
+      if (aluno.matricula === matricula) {
+        this.listaAlunos.splice(index, 1);
+      }
+
+    });
 
   }
 
